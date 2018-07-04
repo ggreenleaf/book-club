@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CustomPrimengModule } from 'src/app/custom-primeng/custom-primeng.module';
+
+import { ChangeDetectionRoutingModule } from './change-detection-routing.module';
+
 @NgModule({
   imports: [
     CommonModule,
-    CustomPrimengModule
+    ChangeDetectionRoutingModule
   ],
   declarations: []
 })
-export class SharedModule { }
+export class ChangeDetectionModule { }
