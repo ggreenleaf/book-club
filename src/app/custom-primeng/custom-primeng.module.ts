@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { MenuModule } from 'primeng/menu';
-import { AccordionModule, PanelMenuModule } from 'primeng/primeng';
+import { AccordionModule, PanelMenuModule, TabMenuModule } from 'primeng/primeng';
 import { PanelModule } from 'primeng/primeng';
 import { ButtonModule } from 'primeng/primeng';
 import { RadioButtonModule } from 'primeng/primeng';
@@ -16,7 +16,8 @@ import { RadioButtonModule } from 'primeng/primeng';
     AccordionModule,
     PanelModule,
     PanelMenuModule,
-    RadioButtonModule
+    RadioButtonModule,
+    TabMenuModule
   ],
   exports: [
     MenuModule,
@@ -24,7 +25,8 @@ import { RadioButtonModule } from 'primeng/primeng';
     AccordionModule,
     PanelModule,
     RadioButtonModule,
-    PanelMenuModule
+    PanelMenuModule,
+    TabMenuModule
   ]
 })
 export class CustomPrimengModule { }
