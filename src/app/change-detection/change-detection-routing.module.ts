@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ChangeDetectionComponent } from './change-detection/change-detection.component';
+import { DefaultComponent } from './default/default.component';
 
 const routes: Routes = [
-  {path: '', component: ChangeDetectionComponent}
+  {path: '', component: DefaultComponent}
 ];
 
 @NgModule({

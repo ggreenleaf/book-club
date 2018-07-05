@@ -1,0 +1,39 @@
+<div fxLayout="row" class="parent-container">
+  <div>
+    <h3>The count number property</h3>
+    <div>
+      {{count}}
+      <button pButton type="button" label="Update Parent" (click)="updateCount()"></button>
+    </div>
+  </div>
+  <div>
+    <h3>The count object property</h3>
+    <div>
+      <pre>{{countObject | json }}</pre>
+      <button pButton type="button" label="Update Parent" (click)="updateCountObject()"></button>
+    </div>
+    <div>
+        <p-table [value]="changes" [rows]="10" [paginator]="true" [rowsPerPageOptions]="[5,10,20]" [totalRecords]="changes.length">
+          <ng-template pTemplate="header">
+            <tr>
+              <th>Property Name</th>
+              <th>Previous Value</th>
+              <th>New Value</th>
+              <th>Is First Change</th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-log>
+            <tr>
+              <td>{{log.propName}}</td>
+              <td>{{log.previousValue}}</td>
+              <td>{{log.currentValue | json}}</td>
+              <td>{{log.isFirstChange}}</td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+  </div>
+  <div>
+    <app-child [countObject]="countObject" [count]="count"></app-child>
+  </div>
+</div>
