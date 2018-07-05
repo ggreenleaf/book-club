@@ -49,4 +49,8 @@ export class ChildComponent implements OnInit, OnChanges {
     this.count += 1;
   }
 
+  clearLogs() {
+    this.changes = []
+  }
+
 }

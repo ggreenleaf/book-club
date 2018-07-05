@@ -49,4 +49,7 @@ export class ParentComponent implements OnInit {
   updateCountObject() {
     this.countObject.value += 1;
   }
+  clearLogs() {
+    this.changes = [];
+  }
 }
