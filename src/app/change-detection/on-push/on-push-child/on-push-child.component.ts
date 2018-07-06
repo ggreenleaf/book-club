@@ -45,7 +45,7 @@ export class OnPushChildComponent implements OnInit {
     this.count += 1;
   }
 
-  resetCountObject() {
+  newCountObject() {
     this.countObject = {value: 0};
   }
 
