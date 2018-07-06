@@ -43,6 +43,7 @@ export class OnPushParentComponent implements OnInit, OnChanges {
   updateCountObject() {
     this.countObject.value += 1;
   }
+  
   resetCountObject() {
     this.countObject = {value: 0};
   }

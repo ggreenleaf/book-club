@@ -45,5 +45,12 @@ export class ChildComponent implements OnInit, OnChanges {
   clearLogs() {
     this.changes = []
   }
+  
+  resetCount() {
+    this.count = 0;
+  }
 
+  newCountObject() {
+    this.countObject = {value: 0};
+  }
 }

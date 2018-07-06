@@ -3,16 +3,16 @@
       <h3>The count number property</h3>
       <div>
         {{count}}
-        <button pButton type="button" label="Update count" (click)="updateCount()"></button>
-        <button pButton type="button" label="Reset Count" (click)="resetCount()"></button>
+        <button pButton type="button" label="Increment Count" (click)="updateCount()"></button>
+        <button pButton type="button" label="Reset Count" (click)="resetCount()" class="ui-button-secondary"></button>
       </div>
     </div>
     <div>
       <h3>The count object property</h3>
       <div>
         <pre>{{countObject | json }}</pre>
-        <button pButton type="button" label="Update Count Object" (click)="updateCountObject()"></button>
-        <button pButton type="button" label="New Count Object" (click)="resetCountObject()"></button>
+        <button pButton type="button" label="Increment Count Object" (click)="updateCountObject()"></button>
+        <button pButton type="button" label="New Count Object" (click)="resetCountObject()" class="ui-button-secondary"></button>
       </div>
       <div>
           <p-table [value]="changes" [rows]="10" [paginator]="true" [rowsPerPageOptions]="[5,10,20]" [totalRecords]="changes.length">
