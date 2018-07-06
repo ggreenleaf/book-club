@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { MenuModule } from 'primeng/menu';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AccordionModule, PanelMenuModule, TabMenuModule, TabViewModule } from 'primeng/primeng';
 import { TableModule } from 'primeng/table';
 import { PanelModule } from 'primeng/primeng';

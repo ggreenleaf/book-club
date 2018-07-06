@@ -10,6 +10,8 @@ import { ParentComponent } from './default/parent/parent.component';
 import { ChildComponent } from './default/child/child.component';
 import { GrandChildComponent } from './default/grand-child/grand-child.component';
 import { ChangeLogComponent } from './change-log/change-log.component';
+import { OnPushParentComponent } from './on-push/on-push-parent/on-push-parent.component';
+import { OnPushChildComponent } from './on-push/on-push-child/on-push-child.component';
 
 @NgModule({
   imports: [
@@ -17,6 +19,6 @@ import { ChangeLogComponent } from './change-log/change-log.component';
     CustomPrimengModule,
     ChangeDetectionRoutingModule
   ],
-  declarations: [ChangeDetectionComponent, DefaultComponent, ParentComponent, ChildComponent, GrandChildComponent, ChangeLogComponent]
+  declarations: [ChangeDetectionComponent, DefaultComponent, ParentComponent, ChildComponent, GrandChildComponent, ChangeLogComponent, OnPushParentComponent, OnPushChildComponent]
 })
 export class ChangeDetectionModule { }

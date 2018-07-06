@@ -4,14 +4,17 @@ import {
   OnChanges,
   SimpleChanges,
   SimpleChange,
-  Input } from '@angular/core';
+  Input, 
+  ChangeDetectionStrategy} from '@angular/core';
   import { ILog } from '../../../interfaces/log-interface';
+
 @Component({
-  selector: 'app-child',
-  templateUrl: './child.component.html',
-  styleUrls: ['./child.component.css']
+  selector: 'app-on-push-child',
+  templateUrl: './on-push-child.component.html',
+  styleUrls: ['./on-push-child.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ChildComponent implements OnInit, OnChanges {
+export class OnPushChildComponent implements OnInit {
   @Input() count: number;
   @Input() countObject: {value: number}
   changes: ILog[]= [];
@@ -42,6 +45,14 @@ export class ChildComponent implements OnInit, OnChanges {
     this.count += 1;
   }
 
+  resetCountObject() {
+    this.countObject = {value: 0};
+  }
+
+  resetCount() {
+    this.count = 0;
+  }
+  
   clearLogs() {
     this.changes = []
   }

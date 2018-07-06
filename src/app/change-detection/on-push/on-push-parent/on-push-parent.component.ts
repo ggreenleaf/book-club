@@ -1,25 +1,18 @@
-import { 
-  Component, 
-  OnInit, 
+import { Component, 
+  OnInit,
+  ChangeDetectionStrategy,
   OnChanges,
   SimpleChanges,
-  SimpleChange,
-  Input } from '@angular/core';
+  Input
+ } from '@angular/core';
 import { ILog } from '../../../interfaces/log-interface';
-
-interface log {
-  previousValue: any;
-  currentValue: any;
-  isFirstChange: boolean;
-  propName: string;
-}
-
 @Component({
-  selector: 'app-default-parent',
-  templateUrl: './parent.component.html',
-  styleUrls: ['./parent.component.css']
+  selector: 'app-on-push-parent',
+  templateUrl: './on-push-parent.component.html',
+  styleUrls: ['./on-push-parent.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush 
 })
-export class ParentComponent implements OnInit {
+export class OnPushParentComponent implements OnInit, OnChanges {
   count = 0;
   countObject: {value: number} = {value: 0};
   changes: ILog[] = [];
@@ -50,6 +43,14 @@ export class ParentComponent implements OnInit {
   updateCountObject() {
     this.countObject.value += 1;
   }
+  resetCountObject() {
+    this.countObject = {value: 0};
+  }
+  
+  resetCount() {
+    this.count = 0;
+  }
+
   clearLogs() {
     this.changes = [];
   }
