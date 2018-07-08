@@ -1,3 +1,29 @@
-<p>
-  simple-reactive works!
-</p>
+<div>
+  <h1>Simple Reactive Hero Form</h1>
+  <form (submit)="submit()" [formGroup]="form" novalidate>
+    <div class="hero-form-container">
+      <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+          <span class="ui-inputgroup-addon">
+            <i class="fa fa-user"></i>
+          </span>
+          <input type="text" pInputText placeholder="Name" formControlName="name">
+        </div>
+      </div>
+      <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+          <span class="ui-inputgroup-addon">
+            <i class="fa fa-user"></i>
+          </span>
+          <input type="text" pInputText placeholder="Alter Ego" formControlName="alterEgo">
+        </div>
+      </div>
+      <div class="ui-g-12 ui-md-4">
+        <p-dropdown [options]="powers" formControlName="powerId"></p-dropdown>
+      </div>
+      <button pButton label="Submit Hero"></button>
+    </div>
+    <pre>{{diagnostic | json}}</pre>
+  </form>
+</div>
+<p-growl></p-growl>

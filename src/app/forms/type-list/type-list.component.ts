@@ -15,15 +15,15 @@ export class TypeListComponent implements OnInit {
       {
         label: 'Template',
         items: [
-          {label: 'Simple', routerLink: 'simple-template'},
-          {label: 'Multi-Component', routerLink: 'multi-component'},
-          {label: 'Custom Validation', routerLink: 'custom-validation'}
+          {label: 'Simple', routerLink: '/forms/simple-template'},
+          {label: 'Multi-Component', routerLink: 'forms/multi-component'},
+          {label: 'Custom Validation', routerLink: '/forms/custom-validation'}
         ]
       },
       {
         label: 'Reactive',
         items: [
-          {label: 'Simple', routerLink: 'simple-reactive'},
+          {label: 'Simple', routerLink: '/forms/simple-reactive'},
           {label: 'Multi-Component'},
           {label: 'Custom Validation'}
         ]
