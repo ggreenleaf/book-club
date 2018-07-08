@@ -5,8 +5,19 @@ import {
   SimpleChanges,
   SimpleChange,
   Input, 
-  ChangeDetectionStrategy} from '@angular/core';
+  ChangeDetectionStrategy,
+  ChangeDetectorRef} from '@angular/core';
   import { ILog } from '../../../interfaces/log-interface';
+
+
+/**
+ * In this Child component we use an on push change detection strategy meaning
+ * Change detection won't fire for this component and its children unless the reference 
+ * of its input changes for example if you increment the counter for the counter  Object
+ * you will not see the view re redender for the child because the reference isnt changed
+ * only when you click the new counter reference will the on change fire and reflect in the view. 
+ */
+
 
 @Component({
   selector: 'app-on-push-child',
@@ -18,7 +29,8 @@ export class OnPushChildComponent implements OnInit {
   @Input() count: number;
   @Input() countObject: {value: number}
   changes: ILog[]= [];
-  constructor() { }
+
+  constructor(private cd: ChangeDetectorRef) { }
 
   ngOnInit() {
   }
@@ -55,6 +67,11 @@ export class OnPushChildComponent implements OnInit {
   
   clearLogs() {
     this.changes = []
+  }
+
+  markForCheck() {
+    // mainly used when your change detection strategy is OnPush
+    this.cd.markForCheck();
   }
 
 }
