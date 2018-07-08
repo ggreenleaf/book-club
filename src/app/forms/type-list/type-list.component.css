@@ -1,0 +1,10 @@
+.forms-container {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+.form-list-menu {
+    max-width: 30%;
+    padding: 10px;
+}
