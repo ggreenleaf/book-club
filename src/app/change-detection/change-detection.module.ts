@@ -12,13 +12,25 @@ import { GrandChildComponent } from './default/grand-child/grand-child.component
 import { ChangeLogComponent } from './change-log/change-log.component';
 import { OnPushParentComponent } from './on-push/on-push-parent/on-push-parent.component';
 import { OnPushChildComponent } from './on-push/on-push-child/on-push-child.component';
+import { PublicModule } from '../public/public.module';
 
+// Need to import the public module here because components are not inherited from 
+// parent modules
 @NgModule({
   imports: [
     CommonModule,
+    PublicModule,
     CustomPrimengModule,
     ChangeDetectionRoutingModule
   ],
-  declarations: [ChangeDetectionComponent, DefaultComponent, ParentComponent, ChildComponent, GrandChildComponent, ChangeLogComponent, OnPushParentComponent, OnPushChildComponent]
+  declarations: [
+    ChangeDetectionComponent, 
+    DefaultComponent, 
+    ParentComponent, 
+    ChildComponent, 
+    GrandChildComponent, 
+    ChangeLogComponent, 
+    OnPushParentComponent, 
+    OnPushChildComponent]
 })
 export class ChangeDetectionModule { }

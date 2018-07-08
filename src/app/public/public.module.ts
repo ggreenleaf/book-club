@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CustomPrimengModule } from 'src/app/custom-primeng/custom-primeng.module';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home.component';
+import { ReferenceListComponent } from './reference-list/reference-list.component';
 
 @NgModule({
   imports: [
@@ -10,8 +11,9 @@ import { HomeComponent } from './home/home.component';
     CustomPrimengModule,
   ],
   exports: [
-    NavBarComponent
+    NavBarComponent,
+    ReferenceListComponent
   ],
-  declarations: [NavBarComponent, HomeComponent]
+  declarations: [NavBarComponent, HomeComponent, ReferenceListComponent]
 })
 export class PublicModule { }

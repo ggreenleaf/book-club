@@ -2,8 +2,7 @@ import { Component,
   OnInit,
   ChangeDetectionStrategy,
   OnChanges,
-  SimpleChanges,
-  Input
+  SimpleChanges
  } from '@angular/core';
 import { ILog } from '../../../interfaces/log-interface';
 @Component({

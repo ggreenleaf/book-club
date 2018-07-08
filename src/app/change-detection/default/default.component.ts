@@ -6,8 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./default.component.css']
 })
 export class DefaultComponent implements OnInit {
-
-  constructor() { }
+  sources: string[];
+  constructor() { 
+    this.sources = [
+      "https://blog.angularindepth.com/everything-you-need-to-know-about-change-detection-in-angular-8006c51d206f",
+      "angular.io/docs"
+    ]
+  }
 
   ngOnInit() {
   }
