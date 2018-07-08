@@ -1,3 +1,29 @@
-<p>
-  simple-template works!
-</p>
+<div>
+  <h1>Simple Hero Form</h1>
+  <form #heroForm="ngForm" (submit)="submit()" novalidate>
+    <div class="hero-form-container">
+      <div class="ui-g-12 ui-md-4">
+          <div class="ui-inputgroup">
+            <span class="ui-inputgroup-addon">
+              <i class="fa fa-user"></i>
+            </span>
+            <input type="text" name="hero-name" pInputText placeholder="Name" [(ngModel)]="hero.name" required>
+          </div>
+        </div>
+        <div class="ui-g-12 ui-md-4">
+          <div class="ui-inputgroup">
+            <span class="ui-inputgroup-addon">
+              <i class="fa fa-user"></i>
+            </span>
+            <input type="text" name="hero-alter-ego" pInputText placeholder="Alter Ego" [(ngModel)]="hero.alterEgo" required>
+          </div>
+        </div>
+        <div class="ui-g-12 ui-md-4">
+          <p-dropdown [options]="powers" name="hero-power" [(ngModel)]="hero.powerId" required></p-dropdown>
+        </div>
+        <button pButton label="Submit Hero"></button>
+    </div>
+    <pre>{{diagnostic | json}}</pre>
+  </form>
+</div>
+<p-growl></p-growl>

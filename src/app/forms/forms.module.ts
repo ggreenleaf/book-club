@@ -10,10 +10,15 @@ import { SimpleTemplateComponent } from './template/simple-template/simple-templ
 import { MultiComponentTemplateBaseComponent } from './template/multi-component/multi-component-template-base/multi-component-template-base.component';
 import { CustomValidationTemplateComponent } from './template/custom-validation-template/custom-validation-template.component';
 import { SimpleReactiveComponent } from './reactive/simple-reactive/simple-reactive.component';
-
+import {SharedModule } from 'src/app/shared/shared.module';
+import { ReactiveFormsModule } from '../../../node_modules/@angular/forms';
+import {FormsModule as NgFormsModule } from '@angular/forms';
 @NgModule({
   imports: [
     CommonModule,
+    SharedModule,
+    NgFormsModule,
+    ReactiveFormsModule,
     PublicModule,
     CustomPrimengModule,
     FormsRoutingModule
