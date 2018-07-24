@@ -43,6 +43,4 @@ export class SimpleTemplateComponent implements OnInit {
   get diagnostic() {
     return JSON.stringify(this.hero)
   }
-
-
 }

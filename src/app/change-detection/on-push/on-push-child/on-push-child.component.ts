@@ -6,9 +6,10 @@ import {
   SimpleChange,
   Input, 
   ChangeDetectionStrategy,
-  ChangeDetectorRef} from '@angular/core';
+  ChangeDetectorRef,
+  Output,
+  EventEmitter} from '@angular/core';
   import { ILog } from '../../../interfaces/log-interface';
-
 
 /**
  * In this Child component we use an on push change detection strategy meaning
@@ -28,6 +29,7 @@ import {
 export class OnPushChildComponent implements OnInit {
   @Input() count: number;
   @Input() countObject: {value: number}
+  @Output() randomNumber = new EventEmitter<number>();
   changes: ILog[]= [];
 
   constructor(private cd: ChangeDetectorRef) { }
@@ -36,7 +38,6 @@ export class OnPushChildComponent implements OnInit {
   }
 
   ngOnChanges(simpleChanges: SimpleChanges) {
-    
     for(const key in simpleChanges) {
       const change = simpleChanges[key]
       const newLog = {
@@ -72,6 +73,10 @@ export class OnPushChildComponent implements OnInit {
   markForCheck() {
     // mainly used when your change detection strategy is OnPush
     this.cd.markForCheck();
+  }
+
+  fireEvent() {
+    this.randomNumber.emit(Math.random());
   }
 
 }

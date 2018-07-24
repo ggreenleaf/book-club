@@ -2,6 +2,9 @@
     <div>
       <h3>The count number property</h3>
       <div>
+        Our random number {{randomNumber}}
+      </div>  
+      <div>
         {{count}}
         <button pButton type="button" label="Increment Count" (click)="updateCount()"></button>
         <button pButton type="button" label="Reset Count" (click)="resetCount()" class="ui-button-secondary"></button>
@@ -37,7 +40,7 @@
         </div>
     </div>
     <div>
-      <app-on-push-child [countObject]="countObject" [count]="count"></app-on-push-child>
+      <app-on-push-child (randomNumber)="setRandomNumber($event)" [countObject]="countObject" [count]="count"></app-on-push-child>
     </div>
   </div>
   

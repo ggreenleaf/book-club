@@ -15,7 +15,10 @@ export class OnPushParentComponent implements OnInit, OnChanges {
   count = 0;
   countObject: {value: number} = {value: 0};
   changes: ILog[] = [];
+  randomNumber: number = null;
+
   constructor() { }
+
   ngOnChanges(simpleChanges: SimpleChanges) {
     
     for(const key in simpleChanges) {
@@ -53,5 +56,9 @@ export class OnPushParentComponent implements OnInit, OnChanges {
 
   clearLogs() {
     this.changes = [];
+  }
+
+  setRandomNumber(randNum: number) {
+    this.randomNumber = randNum;
   }
 }
