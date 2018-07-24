@@ -12,7 +12,7 @@ import {FormsModule as CustomFormsModule}  from 'src/app/forms/forms.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,

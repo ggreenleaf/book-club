@@ -1,0 +1,10 @@
+.container {
+  width: 50%;
+  border: aqua solid 5px;
+  padding: 10px;
+  margin: 10px;
+}
+
+button {
+  margin: 10px;
+}

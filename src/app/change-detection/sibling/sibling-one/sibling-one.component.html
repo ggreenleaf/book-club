@@ -1,0 +1,16 @@
+<div class="container">
+    <div>
+      <div class="margin">
+        {{subjectCounter}}
+        <button class="margin" pButton type="button" label="subscribe subject" (click)="subscribeToSubject()" class="ui-button-primary"></button>
+        <button class="margin" pButton type="button" label="increment" (click)="nextSubjectValue()" class="ui-button-secondary"></button>
+      </div>
+    </div>
+    <div>
+      <div class="margin">
+        {{behaviorSubjectCounter}}
+        <button class="margin" pButton type="button" label="subscribe behavior" (click)="subscribeToBehaviorSubject()" class="ui-button-primary"></button>
+        <button class="margin"  pButton type="button" label="increment" (click)="nextBehaviorSubjectValue()" class="ui-button-secondary"></button>
+      </div>
+    </div>
+  </div>

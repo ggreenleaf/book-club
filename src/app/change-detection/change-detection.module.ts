@@ -13,6 +13,8 @@ import { ChangeLogComponent } from './change-log/change-log.component';
 import { OnPushParentComponent } from './on-push/on-push-parent/on-push-parent.component';
 import { OnPushChildComponent } from './on-push/on-push-child/on-push-child.component';
 import { PublicModule } from '../public/public.module';
+import { SiblingOneComponent } from './sibling/sibling-one/sibling-one.component';
+import { SiblingTwoComponent } from './sibling/sibling-two/sibling-two.component';
 
 // Need to import the public module here because components are not inherited from 
 // parent modules
@@ -21,7 +23,7 @@ import { PublicModule } from '../public/public.module';
     CommonModule,
     PublicModule,
     CustomPrimengModule,
-    ChangeDetectionRoutingModule
+    ChangeDetectionRoutingModule,
   ],
   declarations: [
     ChangeDetectionComponent, 
@@ -31,6 +33,9 @@ import { PublicModule } from '../public/public.module';
     GrandChildComponent, 
     ChangeLogComponent, 
     OnPushParentComponent, 
-    OnPushChildComponent]
+    OnPushChildComponent, 
+    SiblingOneComponent,
+    SiblingTwoComponent
+  ]
 })
 export class ChangeDetectionModule { }

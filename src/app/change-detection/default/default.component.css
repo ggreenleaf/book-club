@@ -1,0 +1,6 @@
+.sibling-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border: goldenrod solid 5px;
+}
