@@ -13,7 +13,7 @@ import { NgIfModule } from './ng-if/ng-if.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

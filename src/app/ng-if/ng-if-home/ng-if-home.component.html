@@ -1,3 +1,60 @@
-<code class="language-typescript" pCode>
-  const typeScript: boolean = true;
-</code>
+<div>
+  <h2>A Simple If Else </h2>
+  <p>Current Value {{simpleIfElse}}</p>
+  <button pButton type="button" label="toggle simpleIfElse" (click)="simpleIfElse = !simpleIfElse"></button>
+  <div *ngIf="simpleIfElse; else ElseBlock">
+    <p>The If true block</p>
+  </div>
+  <ng-template #ElseBlock>
+    <div>
+      <p>
+        The the Else Block
+      </p>
+    </div>
+  </ng-template>
+  <pre>
+    <code>
+      &lt;div *ngIf="simpleIfElse; else ElseBlock"&gt;
+          &lt;p&gt;The If true block&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;ng-template #ElseBlock&gt;
+          &lt;div&gt;
+            &lt;p&gt;
+              The the Else Block
+            &lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/ng-template&gt;
+    </code>
+  </pre>
+</div>
+<hr>
+<div>
+    <button pButton type="button" label="async example" (click)="startAsyncData()"></button>
+    <div *ngIf="randomNumber$ | async; let randNumber; else Loading">
+      <p>
+        {{randNumber}}
+      </p>
+    </div>
+    <ng-template #Loading>
+      <div>
+        <p-progressSpinner></p-progressSpinner>
+      </div>
+    </ng-template>
+
+    <pre>
+        <code>
+            <div *ngIf="randomNumber$ | async; let randNumber; else Loading"&gt;
+                &lt;p&gt;
+                  {{randNumber}}
+                &lt;/p&gt;
+              &lt;/div&gt;
+              &lt;ng-template #Loading&gt;
+                &lt;div&gt;
+                  &lt;p-progressSpinner&gt;&lt;/p-progressSpinner&gt;
+                &lt;/div>
+              &lt;/ng-template&gt;
+        </code>
+      </pre>
+
+  </div>
+
