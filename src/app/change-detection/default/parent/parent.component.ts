@@ -1,10 +1,4 @@
-import { 
-  Component, 
-  OnInit, 
-  OnChanges,
-  SimpleChanges,
-  SimpleChange,
-  Input } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { ILog } from '../../../interfaces/log-interface';
 
 interface log {
@@ -24,19 +18,6 @@ export class ParentComponent implements OnInit {
   countObject: {value: number} = {value: 0};
   changes: ILog[] = [];
   constructor() { }
-  ngOnChanges(simpleChanges: SimpleChanges) {
-    
-    for(const key in simpleChanges) {
-      const change = simpleChanges[key]
-      const newLog = {
-        previousValue: change.previousValue,
-        currentValue: change.currentValue,
-        isFirstChange: change.isFirstChange(),
-        propName: key
-      }  
-      this.changes.push(newLog);
-    }
-  }
 
   ngOnInit() {
     this.count = 0;
@@ -51,8 +32,9 @@ export class ParentComponent implements OnInit {
     this.countObject.value += 1;
   }
 
-  clearLogs() {
-    this.changes = [];
+  reset() {
+    this.count = 0;
+    this.countObject = {value: 0};
   }
 
   resetCount() {

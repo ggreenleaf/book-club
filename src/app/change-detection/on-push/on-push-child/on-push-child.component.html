@@ -31,7 +31,7 @@
         <ng-template pTemplate="body" let-log>
           <tr>
             <td>{{log.propName}}</td>
-            <td>{{log.previousValue}}</td>
+            <td>{{log.previousValue | json}}</td>
             <td>{{log.currentValue | json}}</td>
             <td>{{log.isFirstChange}}</td>
           </tr>

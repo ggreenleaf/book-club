@@ -15,25 +15,7 @@
       <button pButton type="button" label="new Count Object" (click)="newCountObject()" class="ui-button-secondary"></button>
     </div>
     <div>
-        <p-table [value]="changes" [rows]="10" [paginator]="true" [rowsPerPageOptions]="[5,10,20]" [totalRecords]="changes.length">
-          <ng-template pTemplate="header">
-            <tr>
-              <th>Property Name</th>
-              <th>Previous Value</th>
-              <th>New Value</th>
-              <th>Is First Change</th>
-            </tr>
-          </ng-template>
-          <ng-template pTemplate="body" let-log>
-            <tr>
-              <td>{{log.propName}}</td>
-              <td>{{log.previousValue | json}}</td>
-              <td>{{log.currentValue | json}}</td>
-              <td>{{log.isFirstChange}}</td>
-            </tr>
-          </ng-template>
-        </p-table>
-        <button pButton (click)="clearLogs()" label="Clear Logs" icon="fa fa-trash" class="ui-button-danger"></button>
+        <button pButton (click)="reset()" label="Reset" icon="fa fa-trash" class="ui-button-danger"></button>
       </div>
   </div>
   <div>
