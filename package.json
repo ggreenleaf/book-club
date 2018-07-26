@@ -26,7 +26,6 @@
     "font-awesome": "^4.7.0",
     "hoek": "^5.0.3",
     "primeicons": "^1.0.0-beta.9",
-    "primejs": "^0.1.1",
     "primeng": "^6.0.0",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
