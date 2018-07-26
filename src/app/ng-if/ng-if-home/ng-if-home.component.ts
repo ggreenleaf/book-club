@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgIfHomeComponent implements OnInit {
 
+  simpleIf = false;
+
   constructor() { }
 
   ngOnInit() {

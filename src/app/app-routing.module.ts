@@ -7,6 +7,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'change-detection', loadChildren: './change-detection/change-detection.module#ChangeDetectionModule'},
   {path: 'forms', loadChildren: './forms/forms.module#FormsModule'},
+  {path: 'ng-if', loadChildren: './ng-if/ng-if.module#NgIfModule'}
 ];
 
 @NgModule({

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormBuilder, FormControl, Validators} from '@angular/forms';
-import { MessageService } from '../../../../../node_modules/primeng/components/common/messageservice';
-import { Hero } from 'src/app/models/hero.model';
+import { MessageService } from 'primeng/components/common/messageservice';
+import { Hero } from '../../../models/hero.model';
 import { SelectItem } from 'primeng/api';
 
 @Component({

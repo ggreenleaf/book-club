@@ -5,13 +5,13 @@ import { FormsRoutingModule } from './forms-routing.module';
 import { FormComponent } from './form/form.component';
 import { TypeListComponent } from './type-list/type-list.component';
 import { CustomPrimengModule } from '../custom-primeng/custom-primeng.module';
-import { PublicModule } from 'src/app/public/public.module';
+import { PublicModule } from '../public/public.module';
 import { SimpleTemplateComponent } from './template/simple-template/simple-template.component';
 import { MultiComponentTemplateBaseComponent } from './template/multi-component/multi-component-template-base/multi-component-template-base.component';
 import { CustomValidationTemplateComponent } from './template/custom-validation-template/custom-validation-template.component';
 import { SimpleReactiveComponent } from './reactive/simple-reactive/simple-reactive.component';
-import {SharedModule } from 'src/app/shared/shared.module';
-import { ReactiveFormsModule } from '../../../node_modules/@angular/forms';
+import {SharedModule } from '../shared/shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
 import {FormsModule as NgFormsModule } from '@angular/forms';
 @NgModule({
   imports: [

@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { SelectItem } from 'primeng/api';
-import { Hero } from 'src/app/models/hero.model';
+import { Hero } from '../../../models/hero.model';
 import { NgForm } from '@angular/forms';
 import { MessageService } from 'primeng/components/common/messageservice';
 
