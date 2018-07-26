@@ -41,8 +41,8 @@
       </div>
     </ng-template>
     <pre>
-        <code>
-            <div *ngIf="randomNumber$ | async; let randNumber; else Loading"&gt;
+        <code ngNonBindable>
+            &lt;div *ngIf="randomNumber$ | async; let randNumber; else Loading"&gt;
                 &lt;p&gt;
                   {{randNumber}}
                 &lt;/p&gt;
@@ -55,7 +55,6 @@
         </code>
       </pre>
   </div>
-
   <div>
     <p>
       *ngIf is actually shorthand for the following
