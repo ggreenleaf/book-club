@@ -4,7 +4,7 @@ import { ChangeDetectionComponent } from './change-detection/change-detection.co
 import { DefaultComponent } from './default/default.component';
 
 const routes: Routes = [
-  {path: '', component: DefaultComponent}
+  {path: 'change-detection', component: DefaultComponent}
 ];
 
 @NgModule({

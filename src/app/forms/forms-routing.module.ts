@@ -7,7 +7,7 @@ import { CustomValidationTemplateComponent } from 'src/app/forms/template/custom
 import { SimpleReactiveComponent } from './reactive/simple-reactive/simple-reactive.component';
 
 const routes: Routes = [
-  {path: '', component: TypeListComponent, 
+  {path: 'forms', component: TypeListComponent, 
     children: [
       {path: 'simple-template', component: SimpleTemplateComponent},
       {path: 'multi-component', component: MultiComponentTemplateBaseComponent},
