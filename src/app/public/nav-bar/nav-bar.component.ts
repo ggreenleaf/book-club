@@ -12,20 +12,26 @@ export class NavBarComponent implements OnInit {
 
   ngOnInit() {
     this.items = [
-        {
-            label: 'Home',
-            icon: 'fa fa-fw fa-home',
-            routerLink: ['/home']
-        },
-        {
-          label: 'Forms',
-          icon: 'fa fa-fw fa-file-o',
-          routerLink: ['/forms']
-        },
-        {
-          label: 'Change Detection',
-          icon: 'fa fa-fw fa-gear',
-          routerLink: ['/change-detection'],
-        }];
+      {
+          label: 'Home',
+          icon: 'fa fa-fw fa-home',
+          routerLink: ['/home']
+      },
+      {
+        label: 'Forms',
+        icon: 'fa fa-fw fa-file-o',
+        routerLink: ['/forms']
+      },
+      {
+        label: 'Change Detection',
+        icon: 'fa fa-fw fa-gear',
+        routerLink: ['/change-detection'],
+      },
+      {
+        label: 'Ng If',
+        icon: 'fa fa-fw fa-coffee',
+        routerLink: ['/ng-if']
+      }
+    ];
   }
 }

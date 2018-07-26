@@ -9,6 +9,7 @@ import { PublicModule } from 'src/app/public/public.module';
 import { CustomPrimengModule } from './custom-primeng/custom-primeng.module';
 import { ChangeDetectionModule } from './change-detection/change-detection.module';
 import {FormsModule as CustomFormsModule}  from 'src/app/forms/forms.module';
+import { NgIfModule } from 'src/app/ng-if/ng-if.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import {FormsModule as CustomFormsModule}  from 'src/app/forms/forms.module';
     BrowserModule,
     CustomFormsModule,
     ChangeDetectionModule,
+    NgIfModule,
     CoreModule,
     SharedModule,
     PublicModule,
